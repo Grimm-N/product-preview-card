@@ -165,7 +165,13 @@ body {
     width: 100%;
     border-radius: 0.5rem;
     padding: 1rem;
+    transition: background .2s ease, color .2s ease;
 }
+
+.card__button:hover {
+    background-color: #1b4d43;
+}
+
 .icon__cart {
     max-width: 1rem;
     width: 100%;

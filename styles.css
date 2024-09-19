@@ -1,0 +1,219 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+html {
+    font-size: 14px;
+}
+
+header, footer {
+    display: none; 
+}
+
+/* BODY */
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    background-color: #f3eae3;
+    font-family: "Montserrat", sans-serif;
+  }
+
+.fraunces {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    max-width: 43.28rem;
+    text-align: left;
+
+    background-color: #fff;
+    border-radius: 0.72rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    margin: 2rem 1rem 2rem 1rem;
+}
+
+.card__image {
+    overflow: hidden;
+    border-radius: 0.72rem 0 0 0.72rem;
+}
+
+.card__image .main__image {
+    width: 100%; 
+    min-height: 100%; 
+}
+
+.card__info {
+    margin: 2.42rem;
+}
+
+.under__title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color: #4d5459;
+    margin-bottom: 2rem;
+}
+
+.main__title {
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+    color: #1e1e22;
+}
+
+.card__text {
+    color: #4d5459;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.card__price {
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2rem;
+}
+
+.actual__price {
+    font-size: 2.3rem;
+    color: #3d8168;
+    justify-self: start;
+}
+.old__price {
+    color: #4d5459;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-align: center;
+    text-decoration: line-through #4d5459 solid 2px;
+}
+
+.card__button {
+    display: flex;
+    justify-content: center;
+    background-color: #3d8168;
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+.icon__cart {
+    max-width: 1rem;
+    width: 100%;
+}
+.button__text {
+    color: #fff;
+    margin-left: 1rem;
+
+}
+
+.footer a{
+    text-decoration: none;
+}
+
+@media (max-width: 480px) {
+    .card {
+        grid-template-columns: 1fr;
+        height: 92vh;
+        margin: 1rem;
+    }
+
+    .card__image {
+        width: 100%;
+        height: 35vh;
+        overflow: hidden;
+        border-radius: 0.72rem 0.72rem 0 0;
+    }
+
+    .card__image .main__image {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        object-fit: cover;
+    }
+
+    .card__info {
+        margin: 1.5rem;
+    }
+
+    .under__title {
+        margin-bottom: 1rem;
+    }
+
+    .main__title {
+        margin-bottom: 1rem;
+    }
+
+    .old__price {
+        text-align: left;
+    }
+}
